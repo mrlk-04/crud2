@@ -1,0 +1,66 @@
+    .div1{
+        background-color: rgb(59, 233, 74);
+        width: 100vw; /* 10% del ancho de la ventana del navegador */
+        height: 7vh; /* 10% de la altura de la ventana del navegador */
+    }
+    .txt1{
+        text-align: center;
+        margin: 0px;
+    }
+    .txt2{
+        font-size: 10px;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        margin: 0px;
+    }
+
+    .div2{
+        background-color: aquamarine;
+        width: 100vw;
+        height: 100vh;
+        border: rgb(145, 137, 137) solid 2px;
+        border-radius: 5px;
+    }
+
+.div3{
+    background-color: rgb(148, 196, 238);
+    width: 90vw;
+    height: 12vh;
+    position: absolute;
+    top: 12%;
+    left: 5%;
+    border: beige solid 3px;
+    border-radius: 15px;
+}
+
+.div4{
+    background-color: rgb(233, 115, 227);
+    width: 90vw;
+    height: 50vh;
+    position: absolute;
+    top: 30%;
+    left: 7%;
+}
+
+.tabla {
+    border-collapse: collapse; /* Eliminar espacios entre celdas */
+    width: 100%; /* Ancho completo */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Sombra para la tabla */
+    border: 2px solid #009879; /* Borde de la tabla */
+}
+
+.tabla th, .tabla td {
+    border: 1px solid #dddddd; /* Bordes de las celdas */
+    padding: 1px 1px; /* Relleno en las celdas */
+}
+
+.tabla thead tr {
+    background-color: #2587e2; /* Color de fondo para el encabezado */
+    color: #ffffff; /* Color del texto del encabezado */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+.tabla tbody tr:hover {
+    background-color: #7de967; /* Color de fondo al pasar el mouse */
+}

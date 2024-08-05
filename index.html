@@ -1,0 +1,88 @@
+<?php
+
+$conexion = mysqli_connect('db4free.net','marlonk','1234567','pueba01')
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="icon" href="icono/icono.jpg" type="image/x-icon">
+    <title>CRUD online</title>
+</head>
+<body>
+    <div class="div1">
+        <h1 class="txt1">Operaciones CRUD</h1>
+        <h1 class="txt2"> By Marlon Kerguelen</h1>
+    </div>
+
+    <div class="div2">
+        <div class="div3">
+            <input type="text" placeholder="Identificacion">
+            <input type="text" placeholder="Nombre">
+            <input type="text" placeholder="Apellido">
+            <input type="text" placeholder="Sexo">
+            <input type="text" placeholder="Edad">
+            <input type="text" placeholder="Numero_Telefonico">
+            <input type="text" placeholder="Direccion">
+            <button> Añadir Persona</button>
+        </div>
+
+        <div class="div4">
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>Identificacion</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Sexo</th>
+                        <th>Edad</th>
+                        <th>Numero_Telefonico</th>
+                        <th>Direccion</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1234567890</td>
+                        <td>Pedro</td>
+                        <td>Diaz</td>
+                        <td>Masculino</td>
+                        <td>21</td>
+                        <td>3131234567</td>
+                        <td>Sincelejo Barrio Sevilla</td>
+                    </tr>
+
+                    <?php
+                    $sql = "SELECT * from pueba01"
+                    $result = mysqli_query($conexion,$sql);
+
+                    while($mostrar = mysqli_fetch_array($result)){
+
+                    
+                    ?>
+
+                    <tr>
+                        <td><? php echo $mostrar['Identificacion'] ?></td>
+                        <td><? php echo $mostrar['Nombre'] ?></td>
+                        <td><? php echo $mostrar['Apellido'] ?></td>
+                        <td><? php echo $mostrar['Sexo'] ?></td>
+                        <td><? php echo $mostrar['Edad'] ?></td>
+                        <td><? php echo $mostrar['Numero_Telefonico'] ?></td>
+                        <td><? php echo $mostrar['Direccion'] ?></td>
+                    </tr>
+                </tbody>
+                <?php
+                   }
+                ?>
+            </table>
+        </div>
+
+    </div>
+    
+
+</body>
+</html>
